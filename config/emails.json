@@ -1,0 +1,22 @@
+{
+  "default": {
+    "name": "Base",
+    "data": "Hello ${COMPANY_NAME}, <br><br> I hope this email finds you well! My name is ${NAME}, a ${GRADE} at the Downingtown STEM Academy and am organizing our very own high school hackathon, <a href = 'http://www.stemhacks.com'>STEMHacks</a> (April 25 through April 26).<br><br>I would love to hold a fifteen minute call any time this week and look forward to hearing back from you!<br><br>Thanks again,<br>${NAME}"
+  },
+  "referral": {
+    "name": "Referral",
+    "data": "Hello ${COMPANY_NAME}, <br><br> I hope this email finds you well! My name is ${NAME}, a ${GRADE} at the Downingtown STEM Academy and am organizing our very own high school hackathon, <a href = 'http://www.stemhacks.com'>STEMHacks</a> (April 25 through April 26).<br><br> As an organizer at STEMHacks, I know ${COMPANY} would be a great addition to our Hackathon! I would love to hold a fifteen minute call any time this week! Could you direct me to the right person to talk to about this at ${COMPANY} so we can explore how this is beneficial to both of our interests? <br><br>We look forward to hearing back from you!<br><br>Thanks again,<br>${NAME}"
+  },
+  "marketing": {
+    "name": "Marketing",
+    "data": "Hello ${COMPANY_NAME}, <br><br> I hope this email finds you well! My name is ${NAME}, a ${GRADE} at the Downingtown STEM Academy and am organizing our very own high school hackathon, <a href = 'http://www.stemhacks.com'>STEMHacks</a> (April 25 through April 26).<br><br>At STEMHacks ${COMPANY} will have the unique opportunity of presenting your product to the newest generation of technologically apt teenagers, the perfect audience for your product. These students are the brightest, most passionate and innovative developers, who will be excited to start using your product. Furthermore, branding opportunities at STEMHacks are limitless.<br><br>We can hold a fifteen minute call any day/time this week. We look forward to hearing back from you!<br><br>Thanks again,<br>${NAME}"
+  },
+  "recruiting": {
+    "name": "Recruiting",
+    "data": "Hello ${COMPANY_NAME}, <br><br> I hope this email finds you well! My name is ${NAME}, a ${GRADE} at the Downingtown STEM Academy and am organizing our very own high school hackathon, <a href = 'http://www.stemhacks.com'>STEMHacks</a> (April 25 through April 26).<br><br>At STEMHacks ${COMPANY} will have the unique opportunity of meeting the most passionate, innovative, and dedicated developers from around the country. These students would make great additions as interns / future employees at ${COMPANY}.<br><br>I would love to hold a fifteen minute call any time this week and look forward to hearing back from you!<br><br>Thanks again,<br>${NAME}"
+  },
+  "evangelism": {
+    "name": "Evangelism",
+    "data": "Hello ${COMPANY_NAME}, <br><br> I hope this email finds you well! My name is ${NAME}, a ${GRADE} at the Downingtown STEM Academy and am organizing our very own high school hackathon, <a href = 'http://www.stemhacks.com'>STEMHacks</a> (April 25 through April 26).<br><br>At STEMHacks ${COMPANY} will have the unique opportunity of presenting your product to the next generation. These students are some of the brightest, most passionate, and innovative developers from across the country, who would be the perfect platform to test out your product.<br><br>I would love to hold a fifteen minute call any time this week and look forward to hearing back from you!<br><br>Thanks again,<br>${NAME}"
+  }
+}

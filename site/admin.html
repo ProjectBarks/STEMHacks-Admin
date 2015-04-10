@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>STEMHacks Admin Panel</title>
+    <link rel="apple-touch-icon" sizes="114x114" href="libs/core/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="libs/core/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="libs/core/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="libs/core/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="libs/core/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="libs/core/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="libs/core/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="libs/core/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#4285f4">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <script data-main="libs/app.js" src="libs/vendor/requirejs/require.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/vendor/bootstrap-material-design/dist/css/ripples.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/bootstrap-material-design/dist/css/material.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/Hover/css/hover.css">
+    <link rel="stylesheet" type="text/css" href="libs/core/stylesheets/admin.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/toastr/toastr.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,700,300italic,400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="loader">
+    <h1 id="loader-text" class="center">Loading...</h1>
+</div>
+<div class="header-panel shadow-z-2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3">
+                <h1 id="page-title"><strong>STEM</strong>Hacks<br><div id="page-title-small">Admin</div></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid main">
+    <div class="row">
+        <nav class="col-xs-3 menu">
+            <ul>
+                <li class="active withripple" data-target="#welcome"><i class="mdi-action-home"></i> Welcome</li>
+                <li class="withripple" data-target="#email"><i class="mdi-communication-email"></i> Email Sender</li>
+                <li class="withripple" data-target="#wip"><i class="mdi-action-assignment-turned-in"></i> Check In</li>
+                <li class="withripple" data-target="#wip"><i class="mdi-social-share"></i> Message Broadcaster</li>
+                <li class="withripple" data-target="#chat"><i class="mdi-communication-forum"></i> Group Chat</li>
+                <li class="withripple" data-target="#wip"><i class="mdi-social-person"></i> Manage Users</li>
+                <li id="logout" class="withripple">Logout</li>
+            </ul>
+        </nav>
+        <div class="pages col-xs-9">
+            <div class="col-xs-10">
+                <div class="well page active" id="welcome">
+                    <h1 class="header">Welcome</h1>
+                    <h3>About</h3>
+                    <hr>
+                    <h4>Welcome to STEMHacks Admin Panel! Brandon Barker wrote STEMHacks Admin Panel on April 6, 2015 to make organizing a Hackathon a simpler process. A user system with multiple different applets allows for a diverse toolset that will reduce the amount of time spent doing mundane tasks and increase productivity. Furthermore, the simplistic UI allows for any organizer inexperienced or not to have a head start in running their hackathon.</h4>
+                    <h3>How do I use this?</h3>
+                    <hr>
+                    <h4>To begin using STEMHacks Admin Panel click on one of the menu options on the left-hand side. Each menu pane has an informational section when you click the question mark placed on the side of the title. If you are still confused by using the tool feel free to send an email to <a href="mailto:contact@stemhacks.com">us</a> and we will try to get back to you as soon as possible. To ensure easy of use, all pages are based on Googles Material design guidelines to make the most natively feeling interface as possible. </h4>
+                </div>
+                <div class="well page" id="email">
+                    <h1 class="header">Email Sender</h1>
+                    <form id="email_form" class="form-horizontal">
+                        <fieldset>
+                            <div class="form-group form-group-material-blue">
+                                <label for="email_company_name" class="col-lg-2 control-label">Company</label>
+                                <div class="col-lg-10">
+                                    <input name="company_name" type="text" class="form-control floating-label bottom-space" id="email_company_name" placeholder="Company Name">
+                                    <input name="company_people" type="text" class="form-control floating-label bottom-space" id="email_target_name" placeholder="First Name(s)">
+                                    <input name="company_emails" multiple type="email" class="form-control floating-label bottom-space form-control-success" id="email_target_email" placeholder="Send Email(s)">
+                                    <input name="company_cc" type="email" multiple class="form-control floating-label bottom-space form-control-success" id="email_cc_email" placeholder="CC Email(s)">
+                                </div>
+                            </div>
+                            <div class="form-group form-group-material-blue">
+                                <label for="email_type" class="col-lg-2 control-label">Email Type</label>
+                                <div class="col-lg-10">
+                                    <select name="email_type" class="form-control bottom-space" id="email_type" title="Email Type"></select>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-material-blue">
+                                <label for="email_preview" class="col-lg-2 control-label">Preview</label>
+                                <div class="col-lg-10">
+                                    <div id="email_preview"></div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-material-blue">
+                                <div id="email_buttons">
+                                    <button id="email_reset_button" type="reset" class="btn btn-default">Reset</button>
+                                    <button id="email_submit_button" name="submitButton" type="button" class="btn btn-material-blue">Submit</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="well page" id="chat">
+                    <form autocomplete="off" id="chat-input" class="form-group-material-blue">
+                        <div class="input-group" >
+                            <input id="chat-msg" name="msg" type="text" class="form-control" placeholder="Your Message...">
+                                <span class="input-group-btn">
+                                    <button id="chat-send" class="btn btn-material-blue" type="submit">Send</button>
+                                </span>
+                        </div>
+                    </form>
+                    <div class="container list-group" id="chat-box">
+                    </div>
+                </div>
+                <div class="well page" id="wip">
+                    <h1 class="header">Work in Progress!</h1>
+                    <h4><strong>Sorry this part of the website is currently being worked on!</strong></h4>
+                    <h4>We here at STEMHacks do our best to make the best product as quick as possible; however, due to unspecified circumstances certain features can take longer than others. We will strive to get this feature to you as soon as possible and apologize for the incontinence. If you have any questions send an email to <a href="mailto:contact@stemhacks.com">here</a>.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    require(['core/scripts/admin']);
+    require(['core/scripts/email']);
+    require(['core/scripts/chatroom']);
+</script>
+</html>

@@ -1,0 +1,34 @@
+application: stemhacks-admin
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+inbound_services:
+- channel_presence
+
+handlers:
+- url: /libs
+  static_dir: site/libs
+
+- url: /
+  script: home.app
+
+- url: /email/.*
+  script: emailer.app
+
+- url: /account/.*
+  script: account.app
+
+- url: /chat/.*
+  script: chatroom.app
+
+- url: /_ah/channel/connected/
+  script: chatroom.app
+
+- url: /_ah/channel/disconnected/
+  script: chatroom.app
+
+libraries:
+- name: webapp2
+  version: latest

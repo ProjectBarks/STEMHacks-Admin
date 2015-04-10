@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>STEMHacks Admin</title>
+    <link rel="apple-touch-icon" sizes="114x114" href="libs/core/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="libs/core/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="libs/core/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="libs/core/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="libs/core/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="libs/core/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="libs/core/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="libs/core/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="libs/core/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#4285f4">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <script data-main="libs/app.js" src="libs/vendor/requirejs/require.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/vendor/bootstrap-material-design/dist/css/ripples.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/bootstrap-material-design/dist/css/material.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/Hover/css/hover.css">
+    <link rel="stylesheet" type="text/css" href="libs/core/stylesheets/login.css">
+    <link rel="stylesheet" type="text/css" href="libs/vendor/toastr/toastr.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,700,300italic,400' rel='stylesheet' type='text/css'>
+</head>
+<body class="bluebck">
+<div id="loader">
+    <h1 id="loader-text" class="center">Loading...</h1>
+</div>
+<div class="container">
+    <div class="card card-container">
+        <img id="profile-img" class="profile-img-card" src="data:image/png;base64,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" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form id="form-signin" class="form-group-material-blue">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <button class="btn btn-lg btn-material-blue btn-block btn-signin" type="submit">Sign in</button>
+        </form><!-- /form -->
+    </div>
+</div>
+</body>
+<script>
+    require(['libs/core/scripts/login.js']);
+</script>
+</html>
